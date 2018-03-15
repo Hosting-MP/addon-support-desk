@@ -62,7 +62,7 @@ class MailParser extends Parser
     public function processEmailStr($email_str)
     {
         $email_str = str_replace('"', '', $email_str);
-        if (strpos($email_str, '<') !== false) {
+        if (strpos($email_str, ' <') !== false) {
             list($name, $email) = explode(' <', trim($email_str, '> '), 2);
             $name = trim($name);
         } else {
