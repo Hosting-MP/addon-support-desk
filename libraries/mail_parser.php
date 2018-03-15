@@ -46,9 +46,9 @@ class MailParser extends Parser
      */
     public function getTo()
     {
-        $from = $this->getRawHeader('to');
+        $to = $this->getRawHeader('to');
 
-        return $this->processEmailStr($from);
+        return $this->processEmailStr($to);
     }
 
 
